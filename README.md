@@ -39,7 +39,7 @@
 ![微信截图_20220823213056](https://user-images.githubusercontent.com/46400438/186171652-be3a0f0d-7bc9-41a4-9c48-0ac8a809415e.png)
 
 ### 介绍：
-一个C#控制台程序，用于批量恢复被`Wannacry.exe` “加密”的文件，源码在`Anti_WannaCry`文件夹下
+一个C#控制台程序，用于批量恢复被`Wannacry.exe` “加密”的文件并恢复`Windows`系统默认壁纸，源码在`Anti_WannaCry`文件夹下
 
 ### 使用方法：
 将`Anti_WannaCry.exe`放置于需要恢复的目录下双击运行即可，只能恢复当前目录下的文件
